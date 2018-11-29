@@ -10,17 +10,28 @@ class App extends Component {
     todos: todosData
   }
 
+  handleChange = (id) => {
+      const copyState = {...this.state}
+      const updatedState = copyState.todos.map(todo => {
+        if(todo.id === id){
+          todo.completed = !todo.completed
+        }
+        return todo;
+      })
+    this.setState({todos: updatedState})
+  }
   
   
   
   render() {
-
 
     const todoItems = this.state.todos.map(todo => {
       return (<TodoItem 
                 key={todo.id}
                 text={todo.text}
                 completed={todo.completed}
+                handleChange={this.handleChange}
+                id={todo.id}
               />)
     })
     return (
