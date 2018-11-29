@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import Todos from './components/Todos';
+import TodoItem from './components/TodoItem';
+import classes from './app.module.css';
+
 
 class App extends Component {
   render() {
     return (
-      <div >
-            <input type="checkbox"/> 
-            <p>placeholder text</p>
-            <input type="checkbox"/> 
-            <p>placeholder text</p>
-            <input type="checkbox"/> 
-            <p>placeholder text</p>
-            <input type="checkbox"/> 
-            <p>placeholder text</p>
+      <div className={classes.TodoList} >
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
+          <TodoItem />
       </div>
     );
   }
