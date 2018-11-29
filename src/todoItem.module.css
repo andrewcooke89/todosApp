@@ -4,3 +4,12 @@
     height: 100px;
    
 }
+
+.InputStyle {
+    display: inline;
+    margin-top: 40px;
+}
+
+.pStyle {
+    display: inline;
+}
